@@ -1,0 +1,111 @@
+:root {
+  --hh-primary: #4CAF50;
+  --hh-secondary: #FFC107;
+  --hh-accent: #2196F3;
+  --hh-card-bg: #ffffff;
+  --hh-card-shadow: 0 2px 8px rgba(33, 150, 243, 0.04);
+  --hh-card-radius: 20px;
+  --hh-title-color: #293845;
+  --hh-card-title: #37474f;
+  --hh-text: #444;
+  --hh-btn-radius: 24px;
+  --hh-btn-bg: var(--hh-primary);
+  --hh-btn-color: #fff;
+}
+
+/* Main Container */
+.main-container {
+  max-width: 1020px;
+  margin: 56px auto 0 auto;
+  padding: 32px 12px 54px 12px;
+}
+
+.hh-title {
+  text-align: left;
+  font-size: 2.5rem;
+  margin-bottom: 28px;
+  color: var(--hh-title-color);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-left: 6px;
+}
+
+/* Card Grid */
+.hh-card-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+}
+
+/* Card Styles */
+.hh-card {
+  background: var(--hh-card-bg);
+  border-radius: var(--hh-card-radius);
+  box-shadow: var(--hh-card-shadow);
+  padding: 28px 22px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  min-height: 210px;
+  transition: box-shadow 0.14s, transform 0.13s;
+  border-left: 8px solid var(--hh-secondary);
+}
+
+.hh-card h3 {
+  margin: 0 0 10px 0;
+  color: var(--hh-card-title);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.hh-card p {
+  color: var(--hh-text);
+  font-size: 1.03rem;
+  margin-bottom: 15px;
+  opacity: 0.92;
+}
+
+.hh-card em {
+  color: var(--hh-accent);
+  font-size: 0.96em;
+  font-style: normal;
+}
+
+.hh-btn {
+  background: var(--hh-btn-bg);
+  color: var(--hh-btn-color);
+  border: none;
+  border-radius: var(--hh-btn-radius);
+  padding: 10px 19px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: auto;
+  cursor: not-allowed;
+  opacity: 0.66;
+  transition: background 0.15s;
+}
+
+.hh-card:hover {
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.11);
+  transform: translateY(-2px) scale(1.019);
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 15px 3vw 22px 3vw;
+  }
+  .hh-title {
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+  }
+  .hh-card {
+    padding: 18px 10px;
+    min-height: 140px;
+  }
+}
+
+/* Card-specific accent borders */
+.profiles-card { border-left: 8px solid var(--hh-primary); }
+.matchmaking-card { border-left: 8px solid var(--hh-accent); }
+.messaging-card { border-left: 8px solid var(--hh-secondary); }
+.media-card { border-left: 8px solid var(--hh-accent); }
